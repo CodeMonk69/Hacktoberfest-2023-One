@@ -6,6 +6,13 @@ import java.lang.*;
 import java.io.*;
 
 public class BinarySearch {
+    static void printMessage (String message, boolean isNewLine) {
+        if(isNewLine) {
+            System.out.println(message);
+        } else {
+            System.out.print(message);
+        }
+    }
 
     static int BS(int[] arr, int start , int end, int target)
     {
@@ -29,15 +36,15 @@ public class BinarySearch {
     static Scanner sc=new Scanner(System.in);
     public static void main (String args[])
     {   
-        System.out.println("Enter Size of array = ");
+        printMessage("Enter Size of array = ",true);
         int n=sc.nextInt();
         int [] arr= new int[n];
-        System.out.println("Now Enter each element one by one :- ");
+        printMessage("Now Enter each element one by one :- ",true);
 
         for(int i=0;i<n;i++) {
             arr[i]=sc.nextInt();
         }
-        System.out.println("Enter the search element : ");
+        printMessage("Enter the search element : ",true);
         
         int target= sc.nextInt();
         System.out.println(BS(arr,0,n-1,target)); // log(n)
