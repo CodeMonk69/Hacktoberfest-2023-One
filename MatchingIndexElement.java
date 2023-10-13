@@ -23,7 +23,9 @@ public class MatchingIndexElement {
         }
         return -1;
     }
-    
+    static void newLine() {
+        System.out.println("");
+    }
     static Scanner sc=new Scanner(System.in);
     public static void main (String args[])
     {
@@ -35,6 +37,7 @@ public class MatchingIndexElement {
         for(int i=0;i<n;i++) {
             arr[i]=sc.nextInt();
         }
-        System.out.println("\n"+searchMatchingIndex(arr,n)); // log(n)
+        newLine();
+        System.out.println(searchMatchingIndex(arr,n)); // log(n)
     }
 }
